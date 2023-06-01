@@ -1,0 +1,8 @@
+SELECT 
+    shops.name_product as name, 
+    SUM(sales.quantity_sold) as quantity 
+FROM coffee_shops shops 
+INNER JOIN coffee_sales sales 
+ON shops.id = sales.id_product 
+GROUP BY sales.id_product 
+ORDER BY SUM(sales.quantity_sold) DESC LIMIT 1;

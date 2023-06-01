@@ -1,0 +1,1 @@
+SELECT shops.name_product as name, shops.stock as stock FROM coffee_shops shops ORDER BY shops.stock DESC LIMIT 1;
