@@ -26,6 +26,14 @@ if(count($routesArray) == 3 && $routesArray[3] == "create_table"){
 }
 
 /* ==========
+    METHOD FOR GET SALES
+============= */
+if(count($routesArray) == 3 && $routesArray[3] == "sales"){
+    include "services/sales.php";
+    return;
+}
+
+/* ==========
     REQUESTS METHODS
 ============= */
 if(count($routesArray) == 3 && isset($_SERVER["REQUEST_METHOD"])){
